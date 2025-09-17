@@ -1,0 +1,57 @@
+/* En haut de ton styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Asimovian:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+html {
+  background-color: rgb(12, 12, 12);
+}
+
+.police {
+  font-family: "Asimovian", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.police_project {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+  color: white;
+}
+
+.space {
+  white-space: pre;
+}
+.avatar {
+  border-radius: 50%;
+}
+
+.project-box {
+  border: 2px solid #555;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px;
+  display: inline-block;
+  min-width: 200px;
+  transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1), background 0.2s,
+    box-shadow 0.2s;
+}
+
+.project-box:hover {
+  transform: scale(1.07) rotate(-2deg);
+  background: #012758;
+  border-color: #4285f4;
+}
+
+/* font-family: "Asimovian", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
