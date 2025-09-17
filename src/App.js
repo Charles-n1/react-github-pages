@@ -5,9 +5,8 @@ import { useNavigate } from "react-router-dom";
 const user = {
   name: "Charles NGUYEN",
   Age: 18,
-  ImageURL:
-    "https://media.licdn.com/dms/image/v2/D4E03AQHV2GkwE4fN4A/profile-displayphoto-shrink_800_800/B4EZQiDWHUGYAc-/0/1735738090521?e=1760572800&v=beta&t=KKCxXD2r7Dw3vUhlayBjOaMNFFMuQm562cdaX4cs9QA",
-};
+  ImageURL: "https://media.licdn.com/dms/image/v2/D4E03AQHV2GkwE4fN4A/profile-displayphoto-shrink_800_800/B4EZQiDWHUGYAc-/0/1735738090521?e=1760572800&v=beta&t=KKCxXD2r7Dw3vUhlayBjOaMNFFMuQm562cdaX4cs9QA"
+  };
 
 function MyButton() {
   return <button>Button</button>;
@@ -117,7 +116,7 @@ function Projects() {
           <div
             className="project-box"
             onClick={() =>
-              (window.location.href = `/${project.name.toLowerCase()}.html`)
+              window.location.href = `/public/${project.name.toLowerCase()}.html`
             }
           >
             <h3>{project.name}</h3>
@@ -168,8 +167,6 @@ function Home_page() {
 }
 
 export default function App() {
-  const [page, setPage] = useState("home_page");
-
   return (
     <div>
       <Home_page />
