@@ -10,6 +10,5 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <App />
-    {/* <New_page /> */}
   </StrictMode>
 );
