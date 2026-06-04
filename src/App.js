@@ -159,6 +159,14 @@ export default function App() {
                     domain: "Backend, Web",
                     desc: "API REST backend en Flask avec base de données pour opérations CRUD — créer, lire, mettre à jour, supprimer des ressources.",
                   },
+                  {
+                    name: "Cutiepie",
+                    group: "Solo",
+                    lang: "Python",
+                    techno: "PyTorch",
+                    domain: "Game",
+                    desc: "Jeu vidéo fun créé lors d'un hackathon. On se balade dans une forêt pour retrouver un moyen de rentrer chez soi.",
+                  },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
                     <a href="https://github.com/Charles-n1/" target="_blank" rel="noopener noreferrer" className="project-link">
