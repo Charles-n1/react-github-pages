@@ -299,109 +299,66 @@ main {
   color: #222;
 }
 
-/* Languages section */
-.languages {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Skill pills and hover card */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.languages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.language-card {
+.skill-pill {
   position: relative;
-  background: rgba(255, 255, 255, 0.90);
-  border: 1px solid rgba(4, 0, 255, 0.15);
-  border-radius: 10px;
-  padding: 16px 12px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.language-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.language-name {
+  display: inline-block;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
+  border: 1px solid rgba(4,0,255,0.12);
+  cursor: default;
   font-weight: 600;
   color: #0400ff;
-  font-size: 14px;
-  margin: 0;
 }
 
-.language-hover-card {
+.skill-hover {
+  display: none;
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 8px;
-  background: rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 220px;
+  padding: 10px;
   border-radius: 10px;
-  padding: 16px;
-  width: 240px;
-  color: #ffffff;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 100;
+  color: #fff;
+  z-index: 120;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
-.language-card:hover .language-hover-card {
-  opacity: 1;
-  pointer-events: auto;
+.skill-pill:hover .skill-hover {
+  display: block;
 }
 
-.language-hover-card h4 {
-  color: #00f7ff;
-  font-size: 16px;
+.hover-level {
   font-weight: 700;
-  margin: 0 0 10px 0;
+  color: #00f7ff;
+  margin: 0 0 6px 0;
 }
 
-.language-hover-card p {
-  color: #ffffff;
-  font-size: 12px;
-  margin: 6px 0;
+.hover-projects {
+  margin: 0 0 6px 0;
 }
 
-.lang-level {
-  font-weight: 600;
-}
-
-.lang-projects {
-  margin-bottom: 8px;
-}
-
-.lang-projects-list {
-  list-style: none;
+.hover-projects-list {
   margin: 0;
-  padding: 0;
-  text-align: left;
-  font-size: 11px;
+  padding: 0 0 0 16px;
+  font-size: 12px;
 }
 
-.lang-projects-list li {
-  padding: 3px 0;
-  padding-left: 16px;
-  position: relative;
+.hover-projects-list li {
+  margin: 2px 0;
 }
 
-.lang-projects-list li:before {
-  content: "•";
-  position: absolute;
-  left: 4px;
-}
+/* Skills container */
+/* Keep skills simple: lists inside each skill-card use existing .skill-card ul rules */
 

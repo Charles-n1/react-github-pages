@@ -2,6 +2,29 @@ import React from 'react'
 import './styles.css'
 
 export default function App() {
+  const softSkills = [
+    { name: "Autonomie", level: "N/A", projects: ["Lunar Lander", "API REST", "CutiePie"] },
+    { name: "Travail d'équipe", level: "N/A", projects: ["Zappy", "MyTeams", "Arcade"] },
+    { name: "Apprentissage rapide", level: "N/A", projects: [] },
+    { name: "Rigueur", level: "N/A", projects: [] },
+    { name: "Organisation", level: "N/A", projects: [] },
+    { name: "Créativité", level: "N/A", projects: ["CutiePie"] },
+    { name: "Polyvalence", level: "N/A", projects: [] },
+    { name: "Communication technique", level: "N/A", projects: [] }
+  ]
+
+  const hardSkills = [
+    { name: "C", level: "Expert", projects: ["Minishell", "MyTeams", "Corewar"] },
+    { name: "C++", level: "Avancé", projects: ["Zappy", "Arcade", "Raytracer", "Wolfenstein 3D"] },
+    { name: "Python", level: "Intermédiaire", projects: ["Lunar Lander RL", "API REST", "Cutiepie"] },
+    { name: "JavaScript", level: "Débutant", projects: ["Epytodo"] },
+    { name: "Assembleur", level: "Débutant", projects: ["Corewar"] },
+    { name: "SQL", level: "Débutant", projects: ["Epytodo (MySQL)"] },
+    { name: "HTML / CSS", level: "Débutant-Intermédiaire", projects: ["API REST (Flask templates)"] },
+    { name: "Bash / PowerShell", level: "Avancé", projects: ["Environnement Linux quotidien"] },
+    { name: "VBA", level: "Débutant", projects: ["Cotation automatique (stage)"] }
+  ]
+
   return (
     <div className="rgp-app">
       <header className="topbar">
@@ -11,7 +34,6 @@ export default function App() {
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#languages">Languages</a></li>
             <li><a href="#skills">Skills</a></li>
           </ul>
         </nav>
@@ -194,82 +216,6 @@ export default function App() {
         </section>
 
         <section
-          id="languages"
-          className="section languages"
-          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('${process.env.PUBLIC_URL}/Projects.jpg')` }}
-        >
-          <h2>Languages & Technologies</h2>
-          <div className="languages-grid">
-            {[
-              {
-                name: "C",
-                level: "Expert",
-                projects: ["Minishell", "MyTeams", "Corewar"]
-              },
-              {
-                name: "C++",
-                level: "Avancé",
-                projects: ["Zappy", "Arcade", "Raytracer", "Wolfenstein 3D"]
-              },
-              {
-                name: "Python",
-                level: "Intermédiaire",
-                projects: ["Lunar Lander RL", "API REST", "Cutiepie"]
-              },
-              {
-                name: "JavaScript",
-                level: "Débutant",
-                projects: ["Epytodo"]
-              },
-              {
-                name: "Assembleur",
-                level: "Débutant",
-                projects: ["Corewar"]
-              },
-              {
-                name: "SQL",
-                level: "Débutant",
-                projects: ["Epytodo (MySQL)"]
-              },
-              {
-                name: "HTML / CSS",
-                level: "Débutant-Intermédiaire",
-                projects: ["API REST (Flask templates)"]
-              },
-              {
-                name: "Bash / PowerShell",
-                level: "Avancé",
-                projects: ["Environnement Linux quotidien"]
-              },
-              {
-                name: "VBA",
-                level: "Débutant",
-                projects: ["Cotation automatique (stage)"]
-              }
-            ].map((tech) => (
-              <div key={tech.name} className="language-card">
-                <div className="language-name">{tech.name}</div>
-                <div
-                  className="language-hover-card"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${process.env.PUBLIC_URL}/Projects.jpg')`
-                  }}
-                >
-                  <h4>{tech.name}</h4>
-                  <p className="lang-level"><strong>Niveau:</strong> {tech.level}</p>
-                  <p className="lang-projects"><strong>Projets:</strong></p>
-                  <ul className="lang-projects-list">
-                    {tech.projects.map((proj) => (
-                      <li key={proj}>{proj}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section
           id="skills"
           className="section skills"
           style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('${process.env.PUBLIC_URL}/Skills.jpg')` }}
@@ -281,26 +227,54 @@ export default function App() {
               style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url('${process.env.PUBLIC_URL}/soft-skills.webp')` }}
             >
               <h3>Soft-skills</h3>
-              <ul>
-                <li>Communication</li>
-                <li>Travail d'équipe</li>
-                <li>Adaptabilité</li>
-                <li>Résolution de problèmes</li>
-              </ul>
+              <div className="skill-pills">
+                {softSkills.map((s) => (
+                  <div key={s.name} className="skill-pill">
+                    <span className="pill-name">{s.name}</span>
+                    <div
+                      className="skill-hover"
+                      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('${process.env.PUBLIC_URL}/Projects.jpg')` }}
+                    >
+                      <p className="hover-level"><strong>Niveau:</strong> {s.level}</p>
+                      {s.projects && s.projects.length > 0 && (
+                        <>
+                          <p className="hover-projects"><strong>Projets:</strong></p>
+                          <ul className="hover-projects-list">
+                            {s.projects.map((p) => (
+                              <li key={p}>{p}</li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <div
               className="skill-card"
               style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url('${process.env.PUBLIC_URL}/hard_skills.webp')` }}
             >
               <h3>Hard-skills</h3>
-              <ul>
-                <li>C</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>React</li>
-                <li>Linux</li>
-                <li>Git / GitHub</li>
-              </ul>
+              <div className="skill-pills">
+                {hardSkills.map((t) => (
+                  <div key={t.name} className="skill-pill">
+                    <span className="pill-name">{t.name}</span>
+                    <div
+                      className="skill-hover"
+                      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('${process.env.PUBLIC_URL}/Projects.jpg')` }}
+                    >
+                      <p className="hover-level"><strong>Niveau:</strong> {t.level}</p>
+                      <p className="hover-projects"><strong>Projets:</strong></p>
+                      <ul className="hover-projects-list">
+                        {t.projects.map((p) => (
+                          <li key={p}>{p}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
