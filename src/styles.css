@@ -122,22 +122,34 @@ main {
   background-repeat: no-repeat;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* About section */
 .about {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .about-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: nowrap;
+  max-width: 520px;
+  margin: 0 auto;
 }
 .about-photo {
   width: 200px;
@@ -146,8 +158,9 @@ main {
   object-fit: cover;
 }
 .about-text {
-  flex: 1;
-  min-width: 250px;
+  flex: 0 1 auto;
+  min-width: 0;
+  text-align: center;
 }
 .about-name {
   font-size: 28px;
