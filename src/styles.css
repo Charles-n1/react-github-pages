@@ -114,26 +114,30 @@ main {
 .home { height: 40vh; }
 .about, .portfolio, .skills { min-height: 60vh; }
 
+.home,
+.portfolio,
+.skills {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* About section */
 .about {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 .about-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: nowrap;
-  max-width: 520px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0;
 }
 .about-photo {
   width: 200px;
@@ -142,8 +146,8 @@ main {
   object-fit: cover;
 }
 .about-text {
-  flex: 0 1 auto;
-  min-width: 0;
+  flex: 1;
+  min-width: 250px;
 }
 .about-name {
   font-size: 28px;
@@ -176,3 +180,24 @@ main {
 }
 .projects-column h3 { margin-top: 0; }
 .projects-column ul { margin: 8px 0 0 18px; color: #222 }
+
+/* Skills section */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+}
+.skill-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(4, 0, 255, 0.12);
+  border-radius: 12px;
+  padding: 24px 28px;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.skill-card h3 {
+  margin-top: 0;
+}
+.skill-card ul {
+  margin: 10px 0 0 18px;
+  color: #222;
+}

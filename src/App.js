@@ -6,7 +6,7 @@ export default function App() {
     <div className="rgp-app">
       <header className="topbar">
         <nav className="nav">
-          <a className="nav-logo" href="#home">Portfolio</a>
+          <a className="nav-logo" href="#home">Chrles Nguyen</a>
           <ul className="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -17,7 +17,11 @@ export default function App() {
       </header>
 
       <main>
-        <section id="home" className="section home">
+        <section
+          id="home"
+          className="section home"
+          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)), url('${process.env.PUBLIC_URL}/c.webp')` }}
+        >
           <h1>Bienvenue</h1>
           <p>Reconstruction en cours — bienvenue !</p>
         </section>
@@ -37,7 +41,11 @@ export default function App() {
           </div>
         </section>
 
-        <section id="portfolio" className="section portfolio">
+        <section
+          id="portfolio"
+          className="section portfolio"
+          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('${process.env.PUBLIC_URL}/Portfilio_backgrond.jpeg')` }}
+        >
           <h2>Portfolio</h2>
           <div className="projects-columns">
             <div className="projects-column in-progress">
@@ -60,7 +68,17 @@ export default function App() {
 
         <section id="skills" className="section skills">
           <h2>Skills</h2>
-          <p>Compétences listées ici.</p>
+          <div className="skills-grid">
+            <div className="skill-card">
+              <h3>Soft-skills</h3>
+              <ul>
+                <li>Communication</li>
+                <li>Travail d’équipe</li>
+                <li>Adaptabilité</li>
+                <li>Résolution de problèmes</li>
+              </ul>
+            </div>
+          </div>
         </section>
       </main>
     </div>
