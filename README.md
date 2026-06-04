@@ -12,6 +12,9 @@ npm install
 
 # 3. Lancer en local
 npm start
+
+# 3. Arrêter le programme
+ctrl + c
 ```
 
 Ouvre [http://localhost:3000](http://localhost:3000) dans ton navigateur.
