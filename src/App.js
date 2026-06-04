@@ -36,7 +36,7 @@ export default function App() {
             <img src={`${process.env.PUBLIC_URL}/IMG-20241231-WA0000.jpg`} alt="Charles Nguyen" className="about-photo" />
             <div className="about-text">
               <h3 className="about-name">Bonjour ! Je suis Charles Nguyen.</h3>
-              <p className="about-description">étudiant en 3e année. Je suis ouvert à tous les domaines.</p>
+              <p className="about-description">étudiant en 3e année. Je suis ouvert à tous les domaines. Prêt à de nouveaux défis, je dois apprendre de nouvelles technologies.</p>
             </div>
           </div>
         </section>
