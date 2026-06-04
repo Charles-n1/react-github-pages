@@ -54,17 +54,17 @@ export default function App() {
                 {[
                   {
                     name: "Zappy",
-                    group: "6",
+                    group: "7",
                     lang: "C, C++, Python",
                     techno: "TCP Sockets, SFML",
                     desc: "Jeu réseau multijoueur où des équipes d'IA s'affrontent sur une carte pour atteindre le niveau max via des rituels d'élévation.",
                   },
                   {
                     name: "Echo",
-                    group: "1",
-                    lang: "C",
-                    techno: "—",
-                    desc: "Shell Unix maison gérant pipes, redirections et séparateurs avec priorité d'exécution correcte.",
+                    group: "Solo",
+                    lang: "Python, C++",
+                    techno: "ROS 2, PyTorch, Gazebo, YOLOv8",
+                    desc: "Robot autonome imprimé en 3D capable de naviguer dans un environnement domestique, avec IA apprenante embarquée.",
                   },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
@@ -94,7 +94,7 @@ export default function App() {
                 {[
                   {
                     name: "Corewar",
-                    group: "?",
+                    group: "2",
                     lang: "C",
                     techno: "Machine virtuelle custom",
                     desc: "Machine virtuelle dans laquelle des programmes-champions s'affrontent en mémoire partagée — le dernier à exécuter live gagne.",
@@ -121,13 +121,6 @@ export default function App() {
                     desc: "FPS old-school en raycasting inspiré de Wolfenstein, avec moteur de rendu 3D, sprites animés et système de sauvegarde.",
                   },
                   {
-                    name: "HomeMind",
-                    group: "Solo",
-                    lang: "Python, C++",
-                    techno: "ROS 2, PyTorch, Gazebo, YOLOv8",
-                    desc: "Robot autonome imprimé en 3D capable de naviguer dans un environnement domestique, avec IA apprenante embarquée.",
-                  },
-                  {
                     name: "Raytracer",
                     group: "3",
                     lang: "C++",
@@ -150,10 +143,10 @@ export default function App() {
                   },
                   {
                     name: "API Rest",
-                    group: "—",
-                    lang: "JavaScript",
-                    techno: "Node.js, Express",
-                    desc: "API REST backend pour exposer des routes et gérer des échanges côté serveur.",
+                    group: "Solo",
+                    lang: "Python",
+                    techno: "Flask",
+                    desc: "API REST backend en Flask avec base de données pour opérations CRUD — créer, lire, mettre à jour, supprimer des ressources.",
                   },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
