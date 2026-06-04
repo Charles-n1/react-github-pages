@@ -66,7 +66,11 @@ export default function App() {
           </div>
         </section>
 
-        <section id="skills" className="section skills">
+        <section
+          id="skills"
+          className="section skills"
+          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('${process.env.PUBLIC_URL}/soft-skills.webp')` }}
+        >
           <h2>Skills</h2>
           <div className="skills-grid">
             <div className="skill-card">
