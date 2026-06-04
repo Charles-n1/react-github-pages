@@ -138,17 +138,24 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
+  padding-top: 40px;
+}
+.about h2 {
+  align-self: flex-start;
+  width: 100%;
+  text-align: left;
+  margin: 0 0 20px 0;
 }
 .about-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  flex-wrap: nowrap;
-  max-width: 520px;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 900px;
   margin: 0 auto;
 }
 .about-photo {
@@ -158,9 +165,9 @@ main {
   object-fit: cover;
 }
 .about-text {
-  flex: 0 1 auto;
-  min-width: 0;
-  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
 }
 .about-name {
   font-size: 28px;
