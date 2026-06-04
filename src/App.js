@@ -52,16 +52,23 @@ export default function App() {
               <h3>Projects in progress</h3>
               <ul className="projects-list">
                 {[
-                  { name: "Zappy", lang: "C/Python", tech: "Network, AI", domain: "Game Engine" },
-                  { name: "Echo", lang: "Shell", tech: "Bash scripting", domain: "Scripting" },
+                  {
+                    name: "Zappy",
+                    group: "6",
+                    lang: "C, C++, Python",
+                    techno: "TCP Sockets, SFML",
+                    desc: "Jeu réseau multijoueur où des équipes d'IA s'affrontent sur une carte pour atteindre le niveau max via des rituels d'élévation.",
+                  },
+                  {
+                    name: "Echo",
+                    group: "1",
+                    lang: "C",
+                    techno: "—",
+                    desc: "Shell Unix maison gérant pipes, redirections et séparateurs avec priorité d'exécution correcte.",
+                  },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
-                    <a
-                      href={`https://github.com/Charles-n1/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
+                    <a href="https://github.com/Charles-n1/" target="_blank" rel="noopener noreferrer" className="project-link">
                       {project.name}
                     </a>
                     <div
@@ -71,9 +78,10 @@ export default function App() {
                       }}
                     >
                       <h4 className="project-title">{project.name}</h4>
-                      <p className="project-lang"><strong>Language:</strong> {project.lang}</p>
-                      <p className="project-tech"><strong>Tech:</strong> {project.tech}</p>
-                      <p className="project-domain"><strong>Domain:</strong> {project.domain}</p>
+                      <p className="project-meta"><strong>Group:</strong> {project.group}</p>
+                      <p className="project-meta"><strong>Lang:</strong> {project.lang}</p>
+                      <p className="project-meta"><strong>Techno:</strong> {project.techno}</p>
+                      <p className="project-desc">{project.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -84,20 +92,72 @@ export default function App() {
               <h3>Projects finished</h3>
               <ul className="projects-list">
                 {[
-                  { name: "Corewar", lang: "C", tech: "ASM, VM", domain: "Assembly" },
-                  { name: "MyTeams", lang: "C#", tech: ".NET, SQL", domain: "Communication" },
-                  { name: "Star Trek", lang: "Python", tech: "Game, Graphics", domain: "Game Dev" },
-                  { name: "API Rest", lang: "JavaScript", tech: "Node.js, Express", domain: "Backend" },
-                  { name: "Wolf3D", lang: "C", tech: "3D Graphics, Raycasting", domain: "Graphics" },
-                  { name: "Minishell", lang: "C", tech: "Shell, Parsing", domain: "System" },
+                  {
+                    name: "Corewar",
+                    group: "?",
+                    lang: "C",
+                    techno: "Machine virtuelle custom",
+                    desc: "Machine virtuelle dans laquelle des programmes-champions s'affrontent en mémoire partagée — le dernier à exécuter live gagne.",
+                  },
+                  {
+                    name: "Start Trek (RL)",
+                    group: "2",
+                    lang: "Python",
+                    techno: "Gymnasium, PyTorch",
+                    desc: "Agent de reinforcement learning entraîné à faire atterrir un module lunaire de façon autonome par essai-erreur.",
+                  },
+                  {
+                    name: "MyTeams",
+                    group: "3",
+                    lang: "C",
+                    techno: "TCP Sockets, poll",
+                    desc: "Clone de Microsoft Teams en ligne de commande — serveur multi-clients gérant équipes, canaux, threads et messages privés.",
+                  },
+                  {
+                    name: "Wolf3D",
+                    group: "3",
+                    lang: "C",
+                    techno: "CSFML, Raycasting",
+                    desc: "FPS old-school en raycasting inspiré de Wolfenstein, avec moteur de rendu 3D, sprites animés et système de sauvegarde.",
+                  },
+                  {
+                    name: "HomeMind",
+                    group: "Solo",
+                    lang: "Python, C++",
+                    techno: "ROS 2, PyTorch, Gazebo, YOLOv8",
+                    desc: "Robot autonome imprimé en 3D capable de naviguer dans un environnement domestique, avec IA apprenante embarquée.",
+                  },
+                  {
+                    name: "Raytracer",
+                    group: "3",
+                    lang: "C++",
+                    techno: "libconfig++, SFML",
+                    desc: "Moteur de rendu 3D photoréaliste par lancer de rayons, supportant lumières, ombres, textures et primitives géométriques.",
+                  },
+                  {
+                    name: "Arcade",
+                    group: "3",
+                    lang: "C++",
+                    techno: "dynamic libs, SDL2, nCurses, SFML",
+                    desc: "Plateforme de jeux rétro modulaire chargeant jeux et moteurs graphiques comme plugins dynamiques interchangeables à chaud.",
+                  },
+                  {
+                    name: "Minishell",
+                    group: "1",
+                    lang: "C",
+                    techno: "—",
+                    desc: "Shell Unix maison gérant pipes, redirections et séparateurs avec priorité d'exécution correcte.",
+                  },
+                  {
+                    name: "API Rest",
+                    group: "—",
+                    lang: "JavaScript",
+                    techno: "Node.js, Express",
+                    desc: "API REST backend pour exposer des routes et gérer des échanges côté serveur.",
+                  },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
-                    <a
-                      href={`https://github.com/Charles-n1/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
+                    <a href="https://github.com/Charles-n1/" target="_blank" rel="noopener noreferrer" className="project-link">
                       {project.name}
                     </a>
                     <div
@@ -107,9 +167,10 @@ export default function App() {
                       }}
                     >
                       <h4 className="project-title">{project.name}</h4>
-                      <p className="project-lang"><strong>Language:</strong> {project.lang}</p>
-                      <p className="project-tech"><strong>Tech:</strong> {project.tech}</p>
-                      <p className="project-domain"><strong>Domain:</strong> {project.domain}</p>
+                      <p className="project-meta"><strong>Group:</strong> {project.group}</p>
+                      <p className="project-meta"><strong>Lang:</strong> {project.lang}</p>
+                      <p className="project-meta"><strong>Techno:</strong> {project.techno}</p>
+                      <p className="project-desc">{project.desc}</p>
                     </div>
                   </li>
                 ))}
