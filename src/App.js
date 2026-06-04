@@ -57,6 +57,7 @@ export default function App() {
                     group: "7",
                     lang: "C, C++, Python",
                     techno: "TCP Sockets, SFML",
+                    domain: "Game, Network",
                     desc: "Jeu réseau multijoueur où des équipes d'IA s'affrontent sur une carte pour atteindre le niveau max via des rituels d'élévation.",
                   },
                   {
@@ -64,6 +65,7 @@ export default function App() {
                     group: "Solo",
                     lang: "Python, C++",
                     techno: "ROS 2, PyTorch, Gazebo, YOLOv8",
+                    domain: "IA, Robotics",
                     desc: "Robot autonome imprimé en 3D capable de naviguer dans un environnement domestique, avec IA apprenante embarquée.",
                   },
                 ].map((project) => (
@@ -81,6 +83,7 @@ export default function App() {
                       <p className="project-meta"><strong>Group:</strong> {project.group}</p>
                       <p className="project-meta"><strong>Lang:</strong> {project.lang}</p>
                       <p className="project-meta"><strong>Techno:</strong> {project.techno}</p>
+                      <p className="project-meta"><strong>Domain:</strong> {project.domain}</p>
                       <p className="project-desc">{project.desc}</p>
                     </div>
                   </li>
@@ -97,6 +100,7 @@ export default function App() {
                     group: "2",
                     lang: "C",
                     techno: "Machine virtuelle custom",
+                    domain: "System, Virtual Machine",
                     desc: "Machine virtuelle dans laquelle des programmes-champions s'affrontent en mémoire partagée — le dernier à exécuter live gagne.",
                   },
                   {
@@ -104,6 +108,7 @@ export default function App() {
                     group: "2",
                     lang: "Python",
                     techno: "Gymnasium, PyTorch",
+                    domain: "IA",
                     desc: "Agent de reinforcement learning entraîné à faire atterrir un module lunaire de façon autonome par essai-erreur.",
                   },
                   {
@@ -111,6 +116,7 @@ export default function App() {
                     group: "3",
                     lang: "C",
                     techno: "TCP Sockets, poll",
+                    domain: "Network, Communication",
                     desc: "Clone de Microsoft Teams en ligne de commande — serveur multi-clients gérant équipes, canaux, threads et messages privés.",
                   },
                   {
@@ -118,6 +124,7 @@ export default function App() {
                     group: "3",
                     lang: "C",
                     techno: "CSFML, Raycasting",
+                    domain: "Game, Graphics",
                     desc: "FPS old-school en raycasting inspiré de Wolfenstein, avec moteur de rendu 3D, sprites animés et système de sauvegarde.",
                   },
                   {
@@ -125,6 +132,7 @@ export default function App() {
                     group: "3",
                     lang: "C++",
                     techno: "libconfig++, SFML",
+                    domain: "Graphics, 3D",
                     desc: "Moteur de rendu 3D photoréaliste par lancer de rayons, supportant lumières, ombres, textures et primitives géométriques.",
                   },
                   {
@@ -132,6 +140,7 @@ export default function App() {
                     group: "3",
                     lang: "C++",
                     techno: "dynamic libs, SDL2, nCurses, SFML",
+                    domain: "Game, Architecture",
                     desc: "Plateforme de jeux rétro modulaire chargeant jeux et moteurs graphiques comme plugins dynamiques interchangeables à chaud.",
                   },
                   {
@@ -139,6 +148,7 @@ export default function App() {
                     group: "1",
                     lang: "C",
                     techno: "—",
+                    domain: "System, Shell",
                     desc: "Shell Unix maison gérant pipes, redirections et séparateurs avec priorité d'exécution correcte.",
                   },
                   {
@@ -146,6 +156,7 @@ export default function App() {
                     group: "Solo",
                     lang: "Python",
                     techno: "Flask",
+                    domain: "Backend, Web",
                     desc: "API REST backend en Flask avec base de données pour opérations CRUD — créer, lire, mettre à jour, supprimer des ressources.",
                   },
                 ].map((project) => (
@@ -163,6 +174,7 @@ export default function App() {
                       <p className="project-meta"><strong>Group:</strong> {project.group}</p>
                       <p className="project-meta"><strong>Lang:</strong> {project.lang}</p>
                       <p className="project-meta"><strong>Techno:</strong> {project.techno}</p>
+                      <p className="project-meta"><strong>Domain:</strong> {project.domain}</p>
                       <p className="project-desc">{project.desc}</p>
                     </div>
                   </li>
