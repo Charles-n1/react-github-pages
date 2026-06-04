@@ -50,9 +50,33 @@ export default function App() {
           <div className="projects-columns">
             <div className="projects-column in-progress">
               <h3>Projects in progress</h3>
-              <ul>
-                <li>Projet A — description courte</li>
-                <li>Projet B — description courte</li>
+              <ul className="projects-list">
+                {[
+                  { name: "Zappy", lang: "C/Python", tech: "Network, AI", domain: "Game Engine" },
+                  { name: "Echo", lang: "Shell", tech: "Bash scripting", domain: "Scripting" },
+                ].map((project) => (
+                  <li key={project.name} className="project-list-item">
+                    <a
+                      href={`https://github.com/Charles-n1/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      {project.name}
+                    </a>
+                    <div
+                      className="project-hover-card"
+                      style={{
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${process.env.PUBLIC_URL}/Project_background.jpg')`
+                      }}
+                    >
+                      <h4 className="project-title">{project.name}</h4>
+                      <p className="project-lang"><strong>Language:</strong> {project.lang}</p>
+                      <p className="project-tech"><strong>Tech:</strong> {project.tech}</p>
+                      <p className="project-domain"><strong>Domain:</strong> {project.domain}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -61,13 +85,11 @@ export default function App() {
               <ul className="projects-list">
                 {[
                   { name: "Corewar", lang: "C", tech: "ASM, VM", domain: "Assembly" },
-                  { name: "Zappy", lang: "C/Python", tech: "Network, AI", domain: "Game Engine" },
                   { name: "MyTeams", lang: "C#", tech: ".NET, SQL", domain: "Communication" },
                   { name: "Star Trek", lang: "Python", tech: "Game, Graphics", domain: "Game Dev" },
                   { name: "API Rest", lang: "JavaScript", tech: "Node.js, Express", domain: "Backend" },
                   { name: "Wolf3D", lang: "C", tech: "3D Graphics, Raycasting", domain: "Graphics" },
                   { name: "Minishell", lang: "C", tech: "Shell, Parsing", domain: "System" },
-                  { name: "Echo", lang: "Shell", tech: "Bash scripting", domain: "Scripting" },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
                     <a
@@ -107,7 +129,7 @@ export default function App() {
               <h3>Soft-skills</h3>
               <ul>
                 <li>Communication</li>
-                <li>Travail d’équipe</li>
+                <li>Travail d'équipe</li>
                 <li>Adaptabilité</li>
                 <li>Résolution de problèmes</li>
               </ul>
