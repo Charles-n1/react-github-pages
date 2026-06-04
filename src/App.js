@@ -11,6 +11,7 @@ export default function App() {
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#languages">Languages</a></li>
             <li><a href="#skills">Skills</a></li>
           </ul>
         </nav>
@@ -189,6 +190,82 @@ export default function App() {
                 ))}
               </ul>
             </div>
+          </div>
+        </section>
+
+        <section
+          id="languages"
+          className="section languages"
+          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('${process.env.PUBLIC_URL}/Projects.jpg')` }}
+        >
+          <h2>Languages & Technologies</h2>
+          <div className="languages-grid">
+            {[
+              {
+                name: "C",
+                level: "Expert",
+                projects: ["Minishell", "MyTeams", "Corewar"]
+              },
+              {
+                name: "C++",
+                level: "Avancé",
+                projects: ["Zappy", "Arcade", "Raytracer", "Wolfenstein 3D"]
+              },
+              {
+                name: "Python",
+                level: "Intermédiaire",
+                projects: ["Lunar Lander RL", "API REST", "Cutiepie"]
+              },
+              {
+                name: "JavaScript",
+                level: "Débutant",
+                projects: ["Epytodo"]
+              },
+              {
+                name: "Assembleur",
+                level: "Débutant",
+                projects: ["Corewar"]
+              },
+              {
+                name: "SQL",
+                level: "Débutant",
+                projects: ["Epytodo (MySQL)"]
+              },
+              {
+                name: "HTML / CSS",
+                level: "Débutant-Intermédiaire",
+                projects: ["API REST (Flask templates)"]
+              },
+              {
+                name: "Bash / PowerShell",
+                level: "Avancé",
+                projects: ["Environnement Linux quotidien"]
+              },
+              {
+                name: "VBA",
+                level: "Débutant",
+                projects: ["Cotation automatique (stage)"]
+              }
+            ].map((tech) => (
+              <div key={tech.name} className="language-card">
+                <div className="language-name">{tech.name}</div>
+                <div
+                  className="language-hover-card"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${process.env.PUBLIC_URL}/Projects.jpg')`
+                  }}
+                >
+                  <h4>{tech.name}</h4>
+                  <p className="lang-level"><strong>Niveau:</strong> {tech.level}</p>
+                  <p className="lang-projects"><strong>Projets:</strong></p>
+                  <ul className="lang-projects-list">
+                    {tech.projects.map((proj) => (
+                      <li key={proj}>{proj}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

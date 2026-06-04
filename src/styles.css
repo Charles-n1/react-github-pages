@@ -298,3 +298,110 @@ main {
   margin: 10px 0 0 18px;
   color: #222;
 }
+
+/* Languages section */
+.languages {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.language-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(4, 0, 255, 0.15);
+  border-radius: 10px;
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.language-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.language-name {
+  font-weight: 600;
+  color: #0400ff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.language-hover-card {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 16px;
+  width: 240px;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.language-card:hover .language-hover-card {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.language-hover-card h4 {
+  color: #00f7ff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.language-hover-card p {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+.lang-level {
+  font-weight: 600;
+}
+
+.lang-projects {
+  margin-bottom: 8px;
+}
+
+.lang-projects-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 11px;
+}
+
+.lang-projects-list li {
+  padding: 3px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.lang-projects-list li:before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+}
+
