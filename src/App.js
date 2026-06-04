@@ -195,17 +195,34 @@ export default function App() {
         <section
           id="skills"
           className="section skills"
-          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('${process.env.PUBLIC_URL}/soft-skills.webp')` }}
+          style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('${process.env.PUBLIC_URL}/Skills.jpg')` }}
         >
           <h2>Skills</h2>
           <div className="skills-grid">
-            <div className="skill-card">
+            <div
+              className="skill-card"
+              style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url('${process.env.PUBLIC_URL}/soft-skills.webp')` }}
+            >
               <h3>Soft-skills</h3>
               <ul>
                 <li>Communication</li>
                 <li>Travail d'équipe</li>
                 <li>Adaptabilité</li>
                 <li>Résolution de problèmes</li>
+              </ul>
+            </div>
+            <div
+              className="skill-card"
+              style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url('${process.env.PUBLIC_URL}/hard_skills.webp')` }}
+            >
+              <h3>Hard-skills</h3>
+              <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>React</li>
+                <li>Linux</li>
+                <li>Git / GitHub</li>
               </ul>
             </div>
           </div>

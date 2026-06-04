@@ -277,14 +277,19 @@ main {
 .skills-grid {
   display: flex;
   justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .skill-card {
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(4, 0, 255, 0.12);
   border-radius: 12px;
   padding: 24px 28px;
-  max-width: 420px;
+  width: min(420px, 100%);
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .skill-card h3 {
   margin-top: 0;
