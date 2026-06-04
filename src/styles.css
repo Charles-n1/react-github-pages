@@ -12,7 +12,7 @@
 }
 
 html {
-  background-color: rgb(12, 12, 12);
+  background-color: #ffffff;
 }
 
 .police {
@@ -55,3 +55,77 @@ html {
 /* font-family: "Asimovian", sans-serif;
   font-weight: 400;
   font-style: normal; */
+
+/* Top navigation */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #0400ff;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.nav {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.nav-logo {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.nav-list a:hover {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+/* Layout spacing to account for fixed topbar */
+main {
+  padding-top: 80px;
+}
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  color: #111;
+}
+.home { height: 40vh; }
+.about, .portfolio, .skills { min-height: 60vh; }
+
+/* Portfolio columns */
+.projects-columns {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.projects-column {
+  flex: 1 1 320px;
+  background: #f7f7ff;
+  border: 1px solid #e6e6ff;
+  padding: 18px;
+  border-radius: 8px;
+}
+.projects-column h3 { margin-top: 0; }
+.projects-column ul { margin: 8px 0 0 18px; color: #222 }
