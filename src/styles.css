@@ -315,7 +315,7 @@ main {
   border-radius: 18px;
   border: 1px solid rgba(4,0,255,0.12);
   cursor: default;
-  font-weight: 600;
+  font-weight: 400;
   color: #0400ff;
 }
 
@@ -337,6 +337,21 @@ main {
 
 .skill-pill:hover .skill-hover {
   display: block;
+}
+
+.skill-hover {
+  color: #fff;
+}
+
+.hover-level {
+  font-weight: 700;
+  color: #00f7ff !important;
+  margin: 0 0 6px 0;
+}
+
+.skill-pill:hover .pill-name {
+  text-decoration: underline;
+  color: #0400ff;
 }
 
 .hover-level {

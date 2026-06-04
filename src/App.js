@@ -71,7 +71,7 @@ export default function App() {
         >
           <h2>Portfolio</h2>
           <div className="projects-columns">
-            <div className="projects-column in-progress">
+            <div className="projects-column in-progress" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('${process.env.PUBLIC_URL}/in-progress2.png')` }}>
               <h3>Projects in progress</h3>
               <ul className="projects-list">
                 {[
@@ -114,7 +114,7 @@ export default function App() {
               </ul>
             </div>
 
-            <div className="projects-column finished">
+            <div className="projects-column finished" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('${process.env.PUBLIC_URL}/Complete.png')` }}>
               <h3>Projects finished</h3>
               <ul className="projects-list">
                 {[
@@ -231,22 +231,6 @@ export default function App() {
                 {softSkills.map((s) => (
                   <div key={s.name} className="skill-pill">
                     <span className="pill-name">{s.name}</span>
-                    <div
-                      className="skill-hover"
-                      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('${process.env.PUBLIC_URL}/Projects.jpg')` }}
-                    >
-                      <p className="hover-level"><strong>Niveau:</strong> {s.level}</p>
-                      {s.projects && s.projects.length > 0 && (
-                        <>
-                          <p className="hover-projects"><strong>Projets:</strong></p>
-                          <ul className="hover-projects-list">
-                            {s.projects.map((p) => (
-                              <li key={p}>{p}</li>
-                            ))}
-                          </ul>
-                        </>
-                      )}
-                    </div>
                   </div>
                 ))}
               </div>
