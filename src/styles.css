@@ -21,7 +21,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #f1f5f9;
+  background: #ffffff;
 }
 
 body {
@@ -500,4 +500,103 @@ main {
 .hover-projects-list li {
   margin: 3px 0;
   color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 640px) {
+  /* Nav — 2 rows: logo top, links below */
+  .topbar {
+    height: auto;
+    padding: 8px 0 6px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 0 14px;
+  }
+  .nav-logo {
+    font-size: 14px;
+  }
+  .nav-list {
+    gap: 0;
+  }
+  .nav-list a {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  main {
+    padding-top: 88px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 44px 16px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+  .home {
+    height: 38vh;
+    border-radius: 14px;
+  }
+
+  /* About */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .about-text {
+    text-align: center;
+    min-width: unset;
+    width: 100%;
+  }
+  .about h2 {
+    text-align: center;
+  }
+  .about h2::after {
+    margin: 8px auto 0 auto;
+  }
+  .about-name {
+    font-size: 20px;
+  }
+  .about-description {
+    font-size: 14.5px;
+  }
+  .about-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Portfolio */
+  .projects-columns {
+    flex-direction: column;
+    gap: 14px;
+  }
+  /* Hover cards are useless on touch — hide them */
+  .project-hover-card {
+    display: none !important;
+  }
+  .project-link::before {
+    display: none;
+  }
+
+  /* Skills */
+  .skills-grid {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .skill-card {
+    width: 100%;
+    padding: 20px 18px;
+  }
+  /* Hover popups don't work on touch — hide them */
+  .skill-hover {
+    display: none !important;
+  }
+  .skill-pill {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
