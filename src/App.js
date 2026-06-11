@@ -29,7 +29,7 @@ export default function App() {
     <div className="rgp-app">
       <header className="topbar">
         <nav className="nav">
-          <a className="nav-logo" href="#home">Chrles Nguyen</a>
+          <a className="nav-logo" href="#home">Charles Nguyen</a>
           <ul className="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -71,7 +71,7 @@ export default function App() {
         >
           <h2>Portfolio</h2>
           <div className="projects-columns">
-            <div className="projects-column in-progress" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('${process.env.PUBLIC_URL}/in-progress2.png')` }}>
+            <div className="projects-column in-progress" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('${process.env.PUBLIC_URL}/in-progress.jpg')` }}>
               <h3>Projects in progress</h3>
               <ul className="projects-list">
                 {[
@@ -82,6 +82,7 @@ export default function App() {
                     techno: "TCP Sockets, SFML",
                     domain: "Game, Network",
                     desc: "Jeu réseau multijoueur où des équipes d'IA s'affrontent sur une carte pour atteindre le niveau max via des rituels d'élévation.",
+                    url: "https://github.com/Charles-n1/",
                   },
                   {
                     name: "Echo",
@@ -90,10 +91,11 @@ export default function App() {
                     techno: "ROS 2, PyTorch, Gazebo, YOLOv8",
                     domain: "IA, Robotics",
                     desc: "Robot autonome imprimé en 3D capable de naviguer dans un environnement domestique, avec IA apprenante embarquée.",
+                    url: "https://github.com/Charles-n1/Echo",
                   },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
-                    <a href="https://github.com/Charles-n1/" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
                       {project.name}
                     </a>
                     <div
@@ -125,6 +127,7 @@ export default function App() {
                     techno: "Machine virtuelle custom",
                     domain: "System, Virtual Machine",
                     desc: "Machine virtuelle dans laquelle des programmes-champions s'affrontent en mémoire partagée — le dernier à exécuter live gagne.",
+                    url: "https://github.com/Charles-n1/Corewar",
                   },
                   {
                     name: "Start Trek (RL)",
@@ -133,6 +136,7 @@ export default function App() {
                     techno: "Gymnasium, PyTorch",
                     domain: "IA",
                     desc: "Agent de reinforcement learning entraîné à faire atterrir un module lunaire de façon autonome par essai-erreur.",
+                    url: "https://github.com/Charles-n1/Start-trek",
                   },
                   {
                     name: "MyTeams",
@@ -141,6 +145,7 @@ export default function App() {
                     techno: "TCP Sockets, poll",
                     domain: "Network, Communication",
                     desc: "Clone de Microsoft Teams en ligne de commande — serveur multi-clients gérant équipes, canaux, threads et messages privés.",
+                    url: "https://github.com/Charles-n1/MyTeams",
                   },
                   {
                     name: "Wolf3D",
@@ -149,6 +154,7 @@ export default function App() {
                     techno: "CSFML, Raycasting",
                     domain: "Game, Graphics",
                     desc: "FPS old-school en raycasting inspiré de Wolfenstein, avec moteur de rendu 3D, sprites animés et système de sauvegarde.",
+                    url: "https://github.com/Charles-n1/Wolf3D",
                   },
                   {
                     name: "Raytracer",
@@ -157,6 +163,7 @@ export default function App() {
                     techno: "libconfig++, SFML",
                     domain: "Graphics, 3D",
                     desc: "Moteur de rendu 3D photoréaliste par lancer de rayons, supportant lumières, ombres, textures et primitives géométriques.",
+                    url: "https://github.com/Charles-n1/Raytracer",
                   },
                   {
                     name: "Arcade",
@@ -165,6 +172,7 @@ export default function App() {
                     techno: "dynamic libs, SDL2, nCurses, SFML",
                     domain: "Game, Architecture",
                     desc: "Plateforme de jeux rétro modulaire chargeant jeux et moteurs graphiques comme plugins dynamiques interchangeables à chaud.",
+                    url: "https://github.com/Charles-n1/Arcade",
                   },
                   {
                     name: "Minishell",
@@ -173,6 +181,7 @@ export default function App() {
                     techno: "—",
                     domain: "System, Shell",
                     desc: "Shell Unix maison gérant pipes, redirections et séparateurs avec priorité d'exécution correcte.",
+                    url: "https://github.com/Charles-n1/Minishell-C",
                   },
                   {
                     name: "API Rest",
@@ -181,6 +190,7 @@ export default function App() {
                     techno: "Flask",
                     domain: "Backend, Web",
                     desc: "API REST backend en Flask avec base de données pour opérations CRUD — créer, lire, mettre à jour, supprimer des ressources.",
+                    url: "https://github.com/Charles-n1/API-Flask-Sqlite-Python",
                   },
                   {
                     name: "Cutiepie",
@@ -189,10 +199,11 @@ export default function App() {
                     techno: "PyTorch",
                     domain: "Game",
                     desc: "Jeu vidéo fun créé lors d'un hackathon. On se balade dans une forêt pour retrouver un moyen de rentrer chez soi.",
+                    url: "https://github.com/Charles-n1/CutiePie",
                   },
                 ].map((project) => (
                   <li key={project.name} className="project-list-item">
-                    <a href="https://github.com/Charles-n1/" target="_blank" rel="noopener noreferrer" className="project-link">
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
                       {project.name}
                     </a>
                     <div
