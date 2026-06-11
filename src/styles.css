@@ -365,7 +365,7 @@ main {
   margin: 0 0 6px 0;
 }
 
-.skill-pill:hover .pill-name {
+.skill-pill:hover:has(.skill-hover) .pill-name {
   text-decoration: underline;
   color: #0400ff;
 }

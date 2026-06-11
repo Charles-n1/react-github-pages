@@ -259,7 +259,6 @@ export default function App() {
                       className="skill-hover"
                       style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('${process.env.PUBLIC_URL}/Projects.jpg')` }}
                     >
-                      <p className="hover-level"><strong>Niveau:</strong> {t.level}</p>
                       <p className="hover-projects"><strong>Projets:</strong></p>
                       <ul className="hover-projects-list">
                         {t.projects.map((p) => (
