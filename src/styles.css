@@ -48,9 +48,7 @@ body {
   left: 0;
   right: 0;
   height: 64px;
-  background: rgba(15, 23, 42, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: #0f172a;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
   align-items: center;
@@ -250,12 +248,11 @@ main {
 
 .projects-column {
   flex: 1 1 320px;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border);
   padding: 24px;
   border-radius: 16px;
   box-shadow: var(--shadow);
-  backdrop-filter: blur(4px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -300,17 +297,15 @@ main {
   content: '→';
   font-size: 13px;
   opacity: 0;
-  max-width: 0;
-  overflow: hidden;
-  transition: opacity 0.2s, max-width 0.2s, margin-right 0.2s;
-  margin-right: 0;
+  margin-right: 6px;
   display: inline-block;
+  transform: translateX(-6px);
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .project-link:hover::before {
   opacity: 1;
-  max-width: 20px;
-  margin-right: 6px;
+  transform: translateX(0);
 }
 
 .project-link:hover {
@@ -378,7 +373,7 @@ main {
 }
 
 .skill-card {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 28px 30px;
@@ -387,7 +382,6 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  backdrop-filter: blur(4px);
 }
 
 .skill-card h3 {
